@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA2CC5282A68249400762943 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CC5272A68249400762943 /* Video.swift */; };
 		CAB476512A65820C0076FCB0 /* Cuenta_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB476502A65820C0076FCB0 /* Cuenta_App.swift */; };
 		CAB476532A65820C0076FCB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB476522A65820C0076FCB0 /* ContentView.swift */; };
 		CAB476552A65820D0076FCB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB476542A65820D0076FCB0 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA2CC5272A68249400762943 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		CAB4764D2A65820C0076FCB0 /* Cuenta+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cuenta+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB476502A65820C0076FCB0 /* Cuenta_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuenta_App.swift; sourceTree = "<group>"; };
 		CAB476522A65820C0076FCB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA2CC5262A68247D00762943 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CA2CC5272A68249400762943 /* Video.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CAB476442A65820C0076FCB0 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +107,7 @@
 			children = (
 				CAB476502A65820C0076FCB0 /* Cuenta_App.swift */,
 				CAB476522A65820C0076FCB0 /* ContentView.swift */,
+				CA2CC5262A68247D00762943 /* Models */,
 				CAB476542A65820D0076FCB0 /* Assets.xcassets */,
 				CAB476562A65820D0076FCB0 /* Cuenta_.entitlements */,
 				CAB476572A65820D0076FCB0 /* Preview Content */,
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAB476532A65820C0076FCB0 /* ContentView.swift in Sources */,
+				CA2CC5282A68249400762943 /* Video.swift in Sources */,
 				CAB476512A65820C0076FCB0 /* Cuenta_App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

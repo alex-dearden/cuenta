@@ -7,20 +7,31 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
+    @State var videos: [Video] = []
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        LazyVStack(spacing: 20) {
+            Button(action: {
+                videos.append(Video(name: "new one", icon: .lizard))
+            }, label: {
+                Text("Tap to create new Video")
+            }
+            )
+            
+            ForEach(videos) { video in
+                HStack {
+                    Text(video.name)
+                    video.iconImage()
+                }
+            }
+            .frame(width: 300)
         }
-        .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView(videos: Video.mock)
     }
 }
