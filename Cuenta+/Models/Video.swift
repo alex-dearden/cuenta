@@ -23,6 +23,7 @@ struct Video: Identifiable, Hashable {
     }
 }
 
+
 extension Video {
     static var mock: [Video] {
         return [
