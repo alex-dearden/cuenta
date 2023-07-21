@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		CA2CC5282A68249400762943 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CC5272A68249400762943 /* Video.swift */; };
+		CA7208522A6AAFC20036C4DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7208512A6AAFC20036C4DB /* ContentView.swift */; };
+		CA7208542A6AAFE20036C4DB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7208532A6AAFE20036C4DB /* SettingsView.swift */; };
 		CAB476512A65820C0076FCB0 /* Cuenta_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB476502A65820C0076FCB0 /* Cuenta_App.swift */; };
-		CAB476532A65820C0076FCB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB476522A65820C0076FCB0 /* ContentView.swift */; };
+		CAB476532A65820C0076FCB0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB476522A65820C0076FCB0 /* MainView.swift */; };
 		CAB476552A65820D0076FCB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB476542A65820D0076FCB0 /* Assets.xcassets */; };
 		CAB476592A65820D0076FCB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB476582A65820D0076FCB0 /* Preview Assets.xcassets */; };
 		CAB476632A65820D0076FCB0 /* Cuenta_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB476622A65820D0076FCB0 /* Cuenta_Tests.swift */; };
@@ -36,9 +38,11 @@
 
 /* Begin PBXFileReference section */
 		CA2CC5272A68249400762943 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		CA7208512A6AAFC20036C4DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CA7208532A6AAFE20036C4DB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CAB4764D2A65820C0076FCB0 /* Cuenta+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cuenta+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB476502A65820C0076FCB0 /* Cuenta_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuenta_App.swift; sourceTree = "<group>"; };
-		CAB476522A65820C0076FCB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CAB476522A65820C0076FCB0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CAB476542A65820D0076FCB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAB476562A65820D0076FCB0 /* Cuenta_.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cuenta_.entitlements; sourceTree = "<group>"; };
 		CAB476582A65820D0076FCB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -106,11 +110,13 @@
 			isa = PBXGroup;
 			children = (
 				CAB476502A65820C0076FCB0 /* Cuenta_App.swift */,
-				CAB476522A65820C0076FCB0 /* ContentView.swift */,
+				CAB476522A65820C0076FCB0 /* MainView.swift */,
 				CA2CC5262A68247D00762943 /* Models */,
 				CAB476542A65820D0076FCB0 /* Assets.xcassets */,
 				CAB476562A65820D0076FCB0 /* Cuenta_.entitlements */,
 				CAB476572A65820D0076FCB0 /* Preview Content */,
+				CA7208512A6AAFC20036C4DB /* ContentView.swift */,
+				CA7208532A6AAFE20036C4DB /* SettingsView.swift */,
 			);
 			path = "Cuenta+";
 			sourceTree = "<group>";
@@ -270,8 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB476532A65820C0076FCB0 /* ContentView.swift in Sources */,
+				CA7208542A6AAFE20036C4DB /* SettingsView.swift in Sources */,
+				CAB476532A65820C0076FCB0 /* MainView.swift in Sources */,
 				CA2CC5282A68249400762943 /* Video.swift in Sources */,
+				CA7208522A6AAFC20036C4DB /* ContentView.swift in Sources */,
 				CAB476512A65820C0076FCB0 /* Cuenta_App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

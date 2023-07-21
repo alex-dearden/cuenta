@@ -11,6 +11,17 @@ struct Video: Identifiable, Hashable {
         case lizard
     }
     
+    func iconName() -> String {
+        switch self.icon {
+        case .videoImage:
+            return "video"
+        case .regularImage:
+            return "camera"
+        case .lizard:
+            return "lizard"
+        }
+    }
+    
     func iconImage() -> Image {
         switch self.icon {
         case .videoImage:
@@ -25,7 +36,7 @@ struct Video: Identifiable, Hashable {
 
 
 extension Video {
-    static var mock: [Video] {
+    static var mockVideos: [Video] {
         return [
             Video(name: "Primero", icon: .videoImage),
             Video(name: "Segundo", icon: .regularImage)

@@ -2,57 +2,33 @@
 //  ContentView.swift
 //  Cuenta+
 //
-//  Created by Alex Dearden on 17/07/2023.
+//  Created by Alex Dearden on 21/07/2023.
 //
 
 import SwiftUI
 
-struct MainView: View {
-    @State var videos: [Video] = []
-    @State private var showDetail = false
-    
+struct ContentView: View {
     var body: some View {
-        LazyVStack(spacing: 20) {
-            Button(action: {
-                videos.append(Video(name: "new one", icon: .lizard))
-            }, label: {
-                Text("Tap to create new Video")
-            }
-            )
-            
-            ForEach(videos) { video in
-                HStack {
-                    Text(video.name)
-                    video.iconImage()
-                }
-            }
-            .frame(width: 300)
-            Button("Present sheet") {
-                showDetail.toggle()
-            }
-        }
-        .sheet(isPresented: $showDetail) {
-            DetailView(isPresented: $showDetail)
-        }
+        Label("Favorite Books", systemImage: "books.vertical")
+            .labelStyle(.titleAndIcon)
+            .font(.title)
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+
+///: You can also create a customized label style by modifying an existing style; this example adds a red border to the default label style:
+struct RedBorderedLabelStyle: LabelStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        Label(configuration)
+            .border(Color.red)
+    }
+}
+///: This is applied by like this: .labelStyle(RedBorderedLabelStyle())
+
+///: For more extensive customization or to create a completely new label style, you’ll need to adopt the LabelStyle protocol and implement a LabelStyleConfiguration for the new style.
+
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(videos: Video.mock)
-    }
-}
-
-struct DetailView: View {
-    @Binding var isPresented: Bool
-//    @Binding var video: Video
-    
-    var body: some View {
-        Button("Dismiss") {
-            isPresented = false
-        }
-        VStack {
-            Text("Some detail")
-        }
+        ContentView()
     }
 }

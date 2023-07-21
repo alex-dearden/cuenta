@@ -6,12 +6,31 @@
 //
 
 import SwiftUI
+//
+//@main
+//struct Cuenta_App: App {
+//    var body: some Scene {
+//        WindowGroup {
+//            MainView()
+//        }
+//    }
+//}
 
+///: A Tab view app in SwiftUI
 @main
-struct Cuenta_App: App {
+struct MyApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            TabView {
+                ContentView()
+                    .tabItem {
+                        Label("Journal", systemImage: "book")
+                    }
+                SettingsView()
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
+            }
         }
     }
 }
