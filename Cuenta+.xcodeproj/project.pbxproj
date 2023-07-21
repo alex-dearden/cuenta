@@ -10,8 +10,8 @@
 		CA2CC5282A68249400762943 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CC5272A68249400762943 /* Video.swift */; };
 		CA7208522A6AAFC20036C4DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7208512A6AAFC20036C4DB /* ContentView.swift */; };
 		CA7208542A6AAFE20036C4DB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7208532A6AAFE20036C4DB /* SettingsView.swift */; };
+		CA7208562A6AB9850036C4DB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB476522A65820C0076FCB0 /* MainView.swift */; };
 		CAB476512A65820C0076FCB0 /* Cuenta_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB476502A65820C0076FCB0 /* Cuenta_App.swift */; };
-		CAB476532A65820C0076FCB0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB476522A65820C0076FCB0 /* MainView.swift */; };
 		CAB476552A65820D0076FCB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB476542A65820D0076FCB0 /* Assets.xcassets */; };
 		CAB476592A65820D0076FCB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB476582A65820D0076FCB0 /* Preview Assets.xcassets */; };
 		CAB476632A65820D0076FCB0 /* Cuenta_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB476622A65820D0076FCB0 /* Cuenta_Tests.swift */; };
@@ -86,6 +86,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		CA7208552A6AB90B0036C4DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CAB476522A65820C0076FCB0 /* MainView.swift */,
+				CA7208512A6AAFC20036C4DB /* ContentView.swift */,
+				CA7208532A6AAFE20036C4DB /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CAB476442A65820C0076FCB0 = {
 			isa = PBXGroup;
 			children = (
@@ -109,14 +119,12 @@
 		CAB4764F2A65820C0076FCB0 /* Cuenta+ */ = {
 			isa = PBXGroup;
 			children = (
+				CA7208552A6AB90B0036C4DB /* Views */,
 				CAB476502A65820C0076FCB0 /* Cuenta_App.swift */,
-				CAB476522A65820C0076FCB0 /* MainView.swift */,
 				CA2CC5262A68247D00762943 /* Models */,
 				CAB476542A65820D0076FCB0 /* Assets.xcassets */,
 				CAB476562A65820D0076FCB0 /* Cuenta_.entitlements */,
 				CAB476572A65820D0076FCB0 /* Preview Content */,
-				CA7208512A6AAFC20036C4DB /* ContentView.swift */,
-				CA7208532A6AAFE20036C4DB /* SettingsView.swift */,
 			);
 			path = "Cuenta+";
 			sourceTree = "<group>";
@@ -277,9 +285,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA7208542A6AAFE20036C4DB /* SettingsView.swift in Sources */,
-				CAB476532A65820C0076FCB0 /* MainView.swift in Sources */,
 				CA2CC5282A68249400762943 /* Video.swift in Sources */,
 				CA7208522A6AAFC20036C4DB /* ContentView.swift in Sources */,
+				CA7208562A6AB9850036C4DB /* MainView.swift in Sources */,
 				CAB476512A65820C0076FCB0 /* Cuenta_App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

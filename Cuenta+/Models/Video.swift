@@ -24,7 +24,7 @@ struct Video: Identifiable, Hashable {
         }
     }
     
-    ///: We will probably need the image at some point outside of a Label element
+    ///: We will probably need the image at some point, outside of a Label element
     func iconImage() -> Image {
         return Image(systemName: iconName())
     }
