@@ -11,6 +11,8 @@ struct Video: Identifiable, Hashable {
         case lizard
     }
     
+    ///: I could have the enum conform to String and make these changes above in its initialisation
+    /// but this way gives a more declarative approach and keeps the enum more flexible for future optimisation
     func iconName() -> String {
         switch self.icon {
         case .videoImage:
@@ -22,15 +24,9 @@ struct Video: Identifiable, Hashable {
         }
     }
     
+    ///: We will probably need the image at some point outside of a Label element
     func iconImage() -> Image {
-        switch self.icon {
-        case .videoImage:
-            return Image(systemName: "video")
-        case .regularImage:
-            return Image(systemName: "camera")
-        case .lizard:
-            return Image(systemName: "lizard")
-        }
+        return Image(systemName: iconName())
     }
 }
 
