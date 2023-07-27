@@ -21,7 +21,8 @@ import SwiftUI
 struct MyApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView(videos: .constant(Video.mockVideos))
+            ///: This is just to make the app compile,
+            MainView(videoStorage: VideoStorage(videos: []))
 //            TabView {
 //                ContentView()
 //                    .tabItem {

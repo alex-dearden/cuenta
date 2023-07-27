@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
-    @Binding var videos: [Video]
+//    @Binding var videos: [Video]
+    @ObservedObject var videoStorage: VideoStorage
     @State private var showNewVideo = false
     
     var body: some View {
@@ -31,7 +32,7 @@ struct MainView: View {
                 })
             }.padding(.bottom, 40)
             
-            ForEach(videos) { video in
+            ForEach($videoStorage.videos) { $video in
                 HStack {
                     Label(video.name, systemImage: video.icon.name)
                 }
@@ -48,8 +49,9 @@ struct MainView: View {
 }
 
 struct MainView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        MainView(videos: .constant(Video.mockVideos))
+        MainView(videoStorage: VideoStorage(videos: Video.mockVideos))
     }
 }
 
