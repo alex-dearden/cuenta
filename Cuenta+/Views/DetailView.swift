@@ -10,7 +10,8 @@ struct DetailView: View {
     let video: Video
     
     var body: some View {
-        VStack(alignment: .trailing) {
+        VStack(alignment: .leading) {
+            ///: Creating this close button view that takes a closure as an action is the closest we can get to `sellf.view.dismiss()` in SwiftUI I think
             CloseButton(action: { self.presentation.wrappedValue.dismiss() })
             
             Label(video.name, systemImage: video.icon.rawValue)
