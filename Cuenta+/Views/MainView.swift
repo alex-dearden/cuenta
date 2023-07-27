@@ -19,12 +19,12 @@ struct MainView: View {
             NavigationView {
                 List {
                     ForEach($videoStorage.videos) { $video in
-                        NavigationLink(destination: DetailView(video: $video)) {
+                        NavigationLink(destination: DetailView(video: video)) {
                             HStack {
                                 Label(video.name, systemImage: video.icon.name)
                             }
                         }
-                            .frame(width: 300)
+                        .frame(width: 300)
                     }
                 }
             }
@@ -75,14 +75,27 @@ struct IconView: View {
 
 struct DetailView: View {
     @Environment(\.presentationMode) var presentation
-    @Binding var video: Video
+    ///: Note that this view doesn't manipulate the `video` object in any way, it just displays it
+    /// as such, it doesn't require a binding of any sort to it
+    /// adding a binding or state variable to this object is just a waste and might result in unwanted behaviour
+    /// a regular constant is better
+    
+    let video: Video
     
     var body: some View {
-        Button("Dismiss") {
-            self.presentation.wrappedValue.dismiss()
+        VStack(alignment: .trailing) {
+            Button(action: {
+                self.presentation.wrappedValue.dismiss()
+            },
+               label: {
+            Image(systemName: "clear")
+                .foregroundColor(.red)
+            })
         }
+    
         VStack {
             Label(video.name, systemImage: video.icon.rawValue)
+                .labelStyle(.titleAndIcon)
         }
     }
 }
