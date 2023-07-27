@@ -11,23 +11,39 @@ struct DetailView: View {
     
     var body: some View {
         VStack(alignment: .trailing) {
-            Button(action: {
-                self.presentation.wrappedValue.dismiss()
-            },
-               label: {
-            Image(systemName: "clear")
-                .foregroundColor(.red)
-            })
-            .padding(.bottom, 20)
+            CloseButton(action: { self.presentation.wrappedValue.dismiss() })
             
             Label(video.name, systemImage: video.icon.rawValue)
                 .labelStyle(.titleAndIcon)
+            
+            Spacer()
         }
+        .padding()
+        .frame(maxWidth: .infinity)
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         DetailView(video: Video.mockVideos.first!)
+    }
+}
+
+struct CloseButton: View {
+    let action: () -> ()
+    
+    var body: some View {
+        HStack {
+            Spacer()
+            
+            Button(action: {
+                action()
+            },
+                   label: {
+                Image(systemName: "clear")
+                    .foregroundColor(.red)
+            })
+            .padding(.bottom, 20)
+        }
     }
 }
