@@ -19,11 +19,13 @@ struct MainView: View {
             NavigationView {
                 List {
                     ForEach($videoStorage.videos) { $video in
-                        HStack {
-                            Label(video.name, systemImage: video.icon.name)
+                        NavigationLink(destination: DetailView(video: $video)) {
+                            HStack {
+                                Label(video.name, systemImage: video.icon.name)
+                            }
                         }
+                            .frame(width: 300)
                     }
-                    .frame(width: 300)
                 }
             }
         }
@@ -59,7 +61,7 @@ struct HeaderView: View {
             
             Spacer()
 
-        }.padding(.bottom, 40)
+        }
     }
 }
 
@@ -72,12 +74,12 @@ struct IconView: View {
 }
 
 struct DetailView: View {
-    @Binding var isPresented: Bool
+    @Environment(\.presentationMode) var presentation
     @Binding var video: Video
     
     var body: some View {
         Button("Dismiss") {
-            isPresented = false
+            self.presentation.wrappedValue.dismiss()
         }
         VStack {
             Label(video.name, systemImage: video.icon.rawValue)
