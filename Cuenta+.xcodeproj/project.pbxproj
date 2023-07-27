@@ -12,6 +12,7 @@
 		CA7208542A6AAFE20036C4DB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7208532A6AAFE20036C4DB /* SettingsView.swift */; };
 		CA7208562A6AB9850036C4DB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB476522A65820C0076FCB0 /* MainView.swift */; };
 		CA7208582A6AD3AB0036C4DB /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7208572A6AD3AB0036C4DB /* AddView.swift */; };
+		CA9D96302A72D99C00EB23C5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9D962F2A72D99C00EB23C5 /* DetailView.swift */; };
 		CAB476512A65820C0076FCB0 /* Cuenta_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB476502A65820C0076FCB0 /* Cuenta_App.swift */; };
 		CAB476552A65820D0076FCB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB476542A65820D0076FCB0 /* Assets.xcassets */; };
 		CAB476592A65820D0076FCB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB476582A65820D0076FCB0 /* Preview Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		CA7208512A6AAFC20036C4DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CA7208532A6AAFE20036C4DB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CA7208572A6AD3AB0036C4DB /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		CA9D962F2A72D99C00EB23C5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		CAB4764D2A65820C0076FCB0 /* Cuenta+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cuenta+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB476502A65820C0076FCB0 /* Cuenta_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuenta_App.swift; sourceTree = "<group>"; };
 		CAB476522A65820C0076FCB0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				CA7208512A6AAFC20036C4DB /* ContentView.swift */,
 				CA7208532A6AAFE20036C4DB /* SettingsView.swift */,
 				CA7208572A6AD3AB0036C4DB /* AddView.swift */,
+				CA9D962F2A72D99C00EB23C5 /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				CA7208542A6AAFE20036C4DB /* SettingsView.swift in Sources */,
 				CA2CC5282A68249400762943 /* Video.swift in Sources */,
 				CA7208582A6AD3AB0036C4DB /* AddView.swift in Sources */,
+				CA9D96302A72D99C00EB23C5 /* DetailView.swift in Sources */,
 				CA7208522A6AAFC20036C4DB /* ContentView.swift in Sources */,
 				CA7208562A6AB9850036C4DB /* MainView.swift in Sources */,
 				CAB476512A65820C0076FCB0 /* Cuenta_App.swift in Sources */,
