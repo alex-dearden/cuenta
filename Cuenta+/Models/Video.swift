@@ -34,3 +34,7 @@ extension Video {
         ]
     }
 }
+
+class Videos: ObservableObject {
+    @Published var all: [Video] = []
+}

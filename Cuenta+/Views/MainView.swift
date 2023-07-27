@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct MainView: View {
-    @State var videos: [Video] = []
-    @State private var showDetail = false
+    @Binding var videos: [Video]
+    @State private var showNewVideo = false
     
     var body: some View {
         LazyVStack(spacing: 20) {
             HStack(spacing: 50) {
                 Button(action: {
-                    videos.append(Video(name: "new one", icon: .lizard))
+                    showNewVideo.toggle()
                 }, label: {
                     Label("Add video", systemImage: "doc.fill.badge.plus")
                         .foregroundColor(.purple)
@@ -24,7 +24,7 @@ struct MainView: View {
                 Spacer()
                 
                 Button(action: {
-                    showDetail.toggle()
+//                    showNewVideo.toggle()
                 }, label: {
                     Label("Details", systemImage: "display")
                         
@@ -41,15 +41,15 @@ struct MainView: View {
         }
         .padding()
         .controlSize(.large)
-        .sheet(isPresented: $showDetail) {
-            DetailView(isPresented: $showDetail)
+        .sheet(isPresented: $showNewVideo) {
+            AddView(isPresented: $showNewVideo)
         }
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(videos: Video.mockVideos)
+        MainView(videos: .constant(Video.mockVideos))
     }
 }
 
@@ -58,22 +58,6 @@ struct IconView: View {
     
     var body: some View {
         icon
-    }
-}
-
-struct AddView: View {
-    @State private var name: String = ""
-    @State private var icon: Video.IconImage = .videoImage
-    
-    var body: some View {
-        HStack {
-            TextField("Name", text: $name)
-            Picker("Icon", selection: $icon, content: {
-//                ForEach(Video.IconImage.allCases) { icon in
-//                    IconView(icon: icon)
-//                }
-            })
-        }
     }
 }
 
