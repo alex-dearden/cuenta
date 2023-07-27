@@ -25,7 +25,7 @@ struct Video: Identifiable, Hashable {
     }
 }
 
-
+#if DEBUG
 extension Video {
     static var mockVideos: [Video] {
         return [
@@ -34,6 +34,7 @@ extension Video {
         ]
     }
 }
+#endif
 
 // TODO: We need a view model that owns [Video]
 // and is responsible for updating and manipulating them
