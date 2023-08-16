@@ -17,6 +17,9 @@ struct DetailView: View {
             Label(video.name, systemImage: video.icon.rawValue)
                 .labelStyle(.titleAndIcon)
             
+            Text(video.author)
+                .font(.subheadline)
+            
             Spacer()
         }
         .padding()
@@ -26,7 +29,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(video: Video.mockVideos.first!)
+        DetailView(video: VideoStorage.mockVideos.first!)
     }
 }
 

@@ -31,13 +31,6 @@ extension Video {
     static var mockVideo: Video {
         return self.init(name: "Como encontrar paz", icon: .videoImage, author: "Mariana Branger")
     }
-    
-    static var mockVideos: [Video] {
-        return [
-            Video(name: "Primero", icon: .videoImage, author: "Mariana Branger"),
-            Video(name: "Segundo", icon: .regularImage, author: "Sasha Dearden")
-        ]
-    }
 }
 #endif
 
@@ -49,4 +42,13 @@ class VideoStorage: ObservableObject {
     init(videos: [Video]) {
         self.videos = videos
     }
+    
+    #if DEBUG
+    static var mockVideos: [Video] {
+        return [
+            Video(name: "Primero", icon: .videoImage, author: "Mariana Branger"),
+            Video(name: "Segundo", icon: .regularImage, author: "Sasha Dearden")
+        ]
+    }
+    #endif
 }

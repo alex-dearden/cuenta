@@ -27,7 +27,8 @@ struct MainView: View {
                         .frame(width: 300)
                     }
                 }
-            }.environmentObject(videoManager)
+            }
+            .environmentObject(videoManager)
         }
         .padding()
         .controlSize(.large)
@@ -39,7 +40,7 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(videoStorage: VideoStorage(videos: Video.mockVideos))
+        MainView(videoStorage: VideoStorage(videos: VideoStorage.mockVideos))
     }
 }
 

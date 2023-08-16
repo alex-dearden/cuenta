@@ -23,7 +23,7 @@ struct MyApp: App {
         WindowGroup {
             ///: This is just to make the app compile,
 //            ContentView()
-            MainView(videoStorage: VideoStorage(videos: []))
+            MainView(videoStorage: VideoStorage(videos: VideoStorage.mockVideos))
 //            TabView {
 //                ContentView()
 //                    .tabItem {
