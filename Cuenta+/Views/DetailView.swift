@@ -24,12 +24,16 @@ struct DetailView: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
+        .navigationTitle(video.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(video: VideoStorage.mockVideos.first!)
+        NavigationStack {
+            DetailView(video: VideoStorage.mockVideos.first!)
+        }
     }
 }
 

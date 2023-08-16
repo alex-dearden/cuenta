@@ -24,6 +24,7 @@
 		CAB738AB2A8CE70800B557A1 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB738AA2A8CE70800B557A1 /* ItemRow.swift */; };
 		CAB738B02A8CF29000B557A1 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB738AC2A8CE82F00B557A1 /* HeaderView.swift */; };
 		CAB738B22A8CF31A00B557A1 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB738B12A8CF31A00B557A1 /* ItemDetail.swift */; };
+		CAB738B42A8D0E6900B557A1 /* VideoStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB738B32A8D0E6900B557A1 /* VideoStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		CAB738AA2A8CE70800B557A1 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 		CAB738AC2A8CE82F00B557A1 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		CAB738B12A8CF31A00B557A1 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		CAB738B32A8D0E6900B557A1 /* VideoStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				CA2CC5272A68249400762943 /* Video.swift */,
+				CAB738B32A8D0E6900B557A1 /* VideoStorage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				CA7208562A6AB9850036C4DB /* MainView.swift in Sources */,
 				CAB738B02A8CF29000B557A1 /* HeaderView.swift in Sources */,
 				CAB738AB2A8CE70800B557A1 /* ItemRow.swift in Sources */,
+				CAB738B42A8D0E6900B557A1 /* VideoStorage.swift in Sources */,
 				CAB476512A65820C0076FCB0 /* Cuenta_App.swift in Sources */,
 				CA9D96332A73CFE600EB23C5 /* ArrayManager.swift in Sources */,
 			);

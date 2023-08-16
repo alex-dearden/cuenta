@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @ObservedObject var videoStorage: VideoStorage
+    @EnvironmentObject var videoStorage: VideoStorage
     @State private var showNewVideo = false
     
     @StateObject var videoManager = VideoManager()
@@ -40,7 +40,8 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(videoStorage: VideoStorage(videos: VideoStorage.mockVideos))
+        MainView()
+            .environmentObject(VideoStorage(videos: VideoStorage.mockVideos))
     }
 }
 
