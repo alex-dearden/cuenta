@@ -9,7 +9,6 @@ import SwiftUI
 
 struct AddView: View {
     @Binding var isPresented: Bool
-    
     @EnvironmentObject var storage: VideoStorage
     
     @State private var name: String = ""
@@ -36,12 +35,22 @@ struct AddView: View {
                 })
             }
             
-            Button("Save") {
-                let newItem = Video(name: name, icon: icon, author: "")
-                storage.add(item: newItem)
-                isPresented = false
+            HStack {
+                Button("Cancel") {
+                    isPresented = false
+                }
+                .foregroundColor(.red)
+                .buttonStyle(.bordered)
+                
+                Spacer()
+                
+                Button("Save") {
+                    let newItem = Video(name: name, icon: icon, author: "")
+                    storage.add(item: newItem)
+                    isPresented = false
+                }
+                .buttonStyle(.borderedProminent)
             }
-            .buttonStyle(.borderedProminent)
             
             Spacer()
             
