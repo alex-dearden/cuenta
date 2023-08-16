@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct Cuenta_App: App {
-    @StateObject var storage = VideoStorage(videos: VideoStorage.mockVideos)
+    @StateObject var storage = VideoStorage(items: VideoStorage.mockVideos)
     
     var body: some Scene {
         WindowGroup {

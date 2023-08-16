@@ -7,13 +7,25 @@
 
 import Foundation
 
-// TODO: We need a view model that owns [Video]
-// and is responsible for updating and manipulating them
+///: This class will own the Videos array
+/// and is responsible for updating and manipulating them
+/// it will get added as an `@EnvironmentObject` from the App launch file
+
 class VideoStorage: ObservableObject {
-    @Published var videos: [Video] = []
+    @Published var items: [Video] = []
     
-    init(videos: [Video]) {
-        self.videos = videos
+    init(items: [Video]) {
+        self.items = items
+    }
+
+    func add(item: Video) {
+        items.append(item)
+    }
+
+    func remove(item: Video) {
+        if let index = items.firstIndex(of: item) {
+            items.remove(at: index)
+        }
     }
     
     #if DEBUG

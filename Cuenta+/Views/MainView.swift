@@ -20,7 +20,7 @@ struct MainView: View {
                         
             NavigationView {
                 List {
-                    ForEach(videoStorage.videos) { video in
+                    ForEach(videoStorage.items) { video in
                         NavigationLink(destination: DetailView(video: video)) {
                             ItemRow(item: video)
                         }
@@ -41,7 +41,7 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-            .environmentObject(VideoStorage(videos: VideoStorage.mockVideos))
+            .environmentObject(VideoStorage(items: VideoStorage.mockVideos))
     }
 }
 
