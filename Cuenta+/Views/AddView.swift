@@ -10,6 +10,8 @@ import SwiftUI
 struct AddView: View {
     @Binding var isPresented: Bool
     
+    @EnvironmentObject var manager: VideoManager
+    
     @State private var name: String = ""
     @State private var icon: Video.IconImage = .videoImage
     
@@ -36,6 +38,8 @@ struct AddView: View {
             
             Button(action: {
                 // TODO: Create save button functionality
+                print("calling videoManager.pop")
+                manager.pop()
                 isPresented = false
             }, label: {
                 Text("Save")

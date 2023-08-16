@@ -4,6 +4,7 @@ struct Video: Identifiable, Hashable {
     let id = UUID()
     let name: String
     let icon: IconImage
+    let author: String
     
     enum IconImage: String, CaseIterable, Identifiable {
         case videoImage = "video"
@@ -27,10 +28,14 @@ struct Video: Identifiable, Hashable {
 
 #if DEBUG
 extension Video {
+    static var mockVideo: Video {
+        return self.init(name: "Como encontrar paz", icon: .videoImage, author: "Mariana Branger")
+    }
+    
     static var mockVideos: [Video] {
         return [
-            Video(name: "Primero", icon: .videoImage),
-            Video(name: "Segundo", icon: .regularImage)
+            Video(name: "Primero", icon: .videoImage, author: "Mariana Branger"),
+            Video(name: "Segundo", icon: .regularImage, author: "Sasha Dearden")
         ]
     }
 }

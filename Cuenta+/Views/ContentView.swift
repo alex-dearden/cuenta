@@ -1,34 +1,50 @@
 //
-//  ContentView.swift
-//  Cuenta+
+// From SwiftUI by Example by Paul Hudson
+// https://www.hackingwithswift.com/quick-start/swiftui
 //
-//  Created by Alex Dearden on 21/07/2023.
+// You're welcome to use this code for any purpose,
+// commercial or otherwise, with or without attribution.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+// Our observable object class
+class GameSettings: ObservableObject {
+    @Published var score = 0
+}
+
+// A view that expects to find a GameSettings object
+// in the environment, and shows its score.
+struct ScoreView: View {
+    @EnvironmentObject var settings: GameSettings
+
     var body: some View {
-        Label("Favorite Books", systemImage: "books.vertical")
-            .labelStyle(.titleAndIcon)
-            .font(.title)
+        Text("Score: \(settings.score)")
     }
 }
 
+// A view that creates the GameSettings object,
+// and places it into the environment for the
+// navigation stack.
+struct ContentView: View {
+    @StateObject var settings = GameSettings()
 
-///: You can also create a customized label style by modifying an existing style; this example adds a red border to the default label style:
-struct RedBorderedLabelStyle: LabelStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        Label(configuration)
-            .border(Color.red)
-    }
-}
-///: This is applied by like this: .labelStyle(RedBorderedLabelStyle())
+    var body: some View {
+        NavigationStack {
+            VStack {
+                // A button that writes to the environment settings
+                Button("Increase Score") {
+                    settings.score += 1
+                }
 
-///: For more extensive customization or to create a completely new label style, you’ll need to adopt the LabelStyle protocol and implement a LabelStyleConfiguration for the new style.
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+                NavigationLink {
+                    ScoreView()
+                } label: {
+                    Text("Show Detail View")
+                }
+            }
+            .frame(height: 200)
+        }
+        .environmentObject(settings)
     }
 }

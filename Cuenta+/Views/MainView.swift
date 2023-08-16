@@ -11,6 +11,8 @@ struct MainView: View {
     @ObservedObject var videoStorage: VideoStorage
     @State private var showNewVideo = false
     
+    @StateObject var videoManager = VideoManager()
+    
     var body: some View {
         VStack(spacing: 20) {
             
@@ -18,16 +20,14 @@ struct MainView: View {
                         
             NavigationView {
                 List {
-                    ForEach($videoStorage.videos) { $video in
+                    ForEach(videoStorage.videos) { video in
                         NavigationLink(destination: DetailView(video: video)) {
-                            HStack {
-                                Label(video.name, systemImage: video.icon.name)
-                            }
+                            ItemRow(item: video)
                         }
                         .frame(width: 300)
                     }
                 }
-            }
+            }.environmentObject(videoManager)
         }
         .padding()
         .controlSize(.large)
@@ -40,28 +40,6 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView(videoStorage: VideoStorage(videos: Video.mockVideos))
-    }
-}
-
-struct HeaderView: View {
-    ///: This needs to be a `@Binding` because we have to change its value
-    /// yet the data doesn't belong to this view, it belongs to the calling view
-    /// we could also make it an `@Environment` variable so that this HeaderView can be called from anywhere
-    /// and we don't have to send the bound value
-    @Binding var showNewVideo: Bool
-    
-    var body: some View {
-        HStack(spacing: 50) {
-            Button(action: {
-                showNewVideo.toggle()
-            }, label: {
-                Label("Add video", systemImage: "doc.fill.badge.plus")
-                    .foregroundColor(.purple)
-            })
-            
-            Spacer()
-
-        }
     }
 }
 

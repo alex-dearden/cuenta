@@ -22,6 +22,7 @@ struct MyApp: App {
     var body: some Scene {
         WindowGroup {
             ///: This is just to make the app compile,
+//            ContentView()
             MainView(videoStorage: VideoStorage(videos: []))
 //            TabView {
 //                ContentView()
