@@ -10,7 +10,7 @@ import SwiftUI
 struct AddView: View {
     @Binding var isPresented: Bool
     
-    @EnvironmentObject var manager: VideoManager
+    @EnvironmentObject var storage: VideoStorage
     
     @State private var name: String = ""
     @State private var icon: Video.IconImage = .videoImage
@@ -36,18 +36,12 @@ struct AddView: View {
                 })
             }
             
-            Button(action: {
-                // TODO: Create save button functionality
-                print("calling videoManager.pop")
-                manager.pop()
+            Button("Save") {
+                let newItem = Video(name: name, icon: icon, author: "")
+                storage.add(item: newItem)
                 isPresented = false
-            }, label: {
-                Text("Save")
-                    .foregroundColor(.white)
-                    .padding(5)
-            })
-            .background(.blue)
-            .cornerRadius(5)
+            }
+            .buttonStyle(.borderedProminent)
             
             Spacer()
             
