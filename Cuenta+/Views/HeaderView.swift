@@ -20,7 +20,7 @@ struct HeaderView: View {
                 showNewVideo.toggle()
             }, label: {
                 Label("Add video", systemImage: "doc.fill.badge.plus")
-                    .foregroundColor(.purple)
+                    .foregroundColor(.orange)
             })
             
             Spacer()

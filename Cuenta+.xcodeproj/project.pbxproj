@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA1C68D72A94D745006BDABA /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C68D62A94D745006BDABA /* URLSessionExtensions.swift */; };
+		CA1C68D92A94DBC3006BDABA /* VideoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C68D82A94DBC3006BDABA /* VideoDataManager.swift */; };
+		CA1C68DC2A94DE6E006BDABA /* videos.json in Resources */ = {isa = PBXBuildFile; fileRef = CA1C68DB2A94DE6E006BDABA /* videos.json */; };
+		CA1C68DD2A94DE6E006BDABA /* videos.json in Resources */ = {isa = PBXBuildFile; fileRef = CA1C68DB2A94DE6E006BDABA /* videos.json */; };
 		CA2CC5282A68249400762943 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CC5272A68249400762943 /* Video.swift */; };
 		CA7208522A6AAFC20036C4DB /* OldContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7208512A6AAFC20036C4DB /* OldContentView.swift */; };
 		CA7208542A6AAFE20036C4DB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7208532A6AAFE20036C4DB /* SettingsView.swift */; };
@@ -45,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA1C68D62A94D745006BDABA /* URLSessionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensions.swift; sourceTree = "<group>"; };
+		CA1C68D82A94DBC3006BDABA /* VideoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDataManager.swift; sourceTree = "<group>"; };
+		CA1C68DB2A94DE6E006BDABA /* videos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = videos.json; sourceTree = "<group>"; };
 		CA2CC5272A68249400762943 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		CA7208512A6AAFC20036C4DB /* OldContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldContentView.swift; sourceTree = "<group>"; };
 		CA7208532A6AAFE20036C4DB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -94,6 +101,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA1C68D52A94D70B006BDABA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA1C68D62A94D745006BDABA /* URLSessionExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CA1C68DA2A94DCD9006BDABA /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				CA1C68DB2A94DE6E006BDABA /* videos.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		CA2CC5262A68247D00762943 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				CA9D96322A73CFE600EB23C5 /* ArrayManager.swift */,
+				CA1C68D82A94DBC3006BDABA /* VideoDataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -150,6 +174,8 @@
 		CAB4764F2A65820C0076FCB0 /* Cuenta+ */ = {
 			isa = PBXGroup;
 			children = (
+				CA1C68DA2A94DCD9006BDABA /* Mocks */,
+				CA1C68D52A94D70B006BDABA /* Extensions */,
 				CA9D96312A73CFBD00EB23C5 /* Managers */,
 				CA7208552A6AB90B0036C4DB /* Views */,
 				CAB476502A65820C0076FCB0 /* Cuenta_App.swift */,
@@ -292,6 +318,7 @@
 			files = (
 				CAB476592A65820D0076FCB0 /* Preview Assets.xcassets in Resources */,
 				CAB476552A65820D0076FCB0 /* Assets.xcassets in Resources */,
+				CA1C68DC2A94DE6E006BDABA /* videos.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA1C68DD2A94DE6E006BDABA /* videos.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +345,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA7208542A6AAFE20036C4DB /* SettingsView.swift in Sources */,
+				CA1C68D92A94DBC3006BDABA /* VideoDataManager.swift in Sources */,
 				CAB738B22A8CF31A00B557A1 /* ItemDetail.swift in Sources */,
+				CA1C68D72A94D745006BDABA /* URLSessionExtensions.swift in Sources */,
 				CA2CC5282A68249400762943 /* Video.swift in Sources */,
 				CA7208582A6AD3AB0036C4DB /* AddView.swift in Sources */,
 				CA9D96302A72D99C00EB23C5 /* DetailView.swift in Sources */,

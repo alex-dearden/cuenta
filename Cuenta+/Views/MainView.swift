@@ -11,14 +11,12 @@ struct MainView: View {
     @EnvironmentObject var videoStorage: VideoStorage
     @State private var showNewVideo = false
     
-    @StateObject var videoManager = VideoManager()
-    
     var body: some View {
-        VStack(spacing: 20) {
-            
-            HeaderView(showNewVideo: $showNewVideo)
-                        
-            NavigationView {
+        NavigationView {
+            VStack(spacing: 20) {
+                
+                HeaderView(showNewVideo: $showNewVideo)
+                
                 List {
                     ForEach(videoStorage.items) { video in
                         NavigationLink(destination: DetailView(video: video)) {
@@ -28,20 +26,19 @@ struct MainView: View {
                     }
                 }
             }
-            .environmentObject(videoManager)
-        }
-        .padding()
-        .controlSize(.large)
-        .sheet(isPresented: $showNewVideo) {
-            AddView(isPresented: $showNewVideo)
+            .padding()
+            .controlSize(.large)
+            .sheet(isPresented: $showNewVideo) { AddView(isPresented: $showNewVideo) }
         }
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
-            .environmentObject(VideoStorage(items: VideoStorage.mockVideos))
+        NavigationStack {
+            MainView()
+                .environmentObject(VideoStorage(items: VideoStorage.mockVideos))
+        }
     }
 }
 

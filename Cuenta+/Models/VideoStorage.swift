@@ -27,7 +27,7 @@ class VideoStorage: ObservableObject {
             items.remove(at: index)
         }
     }
-    
+
     #if DEBUG
     static var mockVideos: [Video] {
         return [
