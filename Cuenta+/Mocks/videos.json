@@ -1,23 +1,31 @@
 {
-	"videos": [
-		{ 
-			"name": "First video",
-	    	"author": "Mariana Branger"
-    	},
+    "videos": [
+        {
+            "id": "123",
+            "name": "First video",
+            "author": "Mariana Branger",
+            "icon": "video"
+        },
 
-    	{ 
-			"name": "Second video",
-	    	"author": "Sasha Dearden"
-    	},
+        {
+            "id": "456",
+            "name": "Second video",
+            "author": "Sasha Dearden",
+            "icon": "camera"
+        },
 
-    	{ 
-			"name": "Third video",
-	    	"author": "Gonzalo Dearden"
-    	},
+        {
+            "id": "789",
+            "name": "Third video",
+            "author": "Gonzalo Dearden",
+            "icon": "lizard"
+        },
 
-    	{ 
-			"name": "Fourth video",
-	    	"author": "Tomas Dearden"
-    	},
-	]
+        {
+            "id": "012",
+            "name": "Fourth video",
+            "author": "Tomas Dearden",
+            "icon": "video"
+        }
+    ]
 }

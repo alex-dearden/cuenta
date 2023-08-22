@@ -21,10 +21,10 @@ final class Cuenta_Tests: XCTestCase {
     }
     
     func testFetch() async {
-        let mainObject = try! await dataManager.getVideos()
+        let videos = try! await dataManager.getVideos()
         
-        XCTAssertFalse(mainObject.videos.isEmpty)
-        XCTAssertTrue(mainObject.videos.count > 0)
+        XCTAssertFalse(videos.isEmpty)
+        XCTAssertTrue(videos.count > 0)
     }
 
 }

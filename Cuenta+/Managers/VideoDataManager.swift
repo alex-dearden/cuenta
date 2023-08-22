@@ -17,23 +17,40 @@ protocol GenericFetchable {
     func getItems() -> [V]
 }
 
-struct VideoDataManager {
-    enum DecodingError: Error {
-        case fileNotFound
-    }
+struct MyActors: Decodable {
     
-    func getVideos() async throws -> ExternalVideos {
+}
+
+struct VideoDataManager {
+    enum DecodeError: Error {
+        case unknown
+    }
+
+    func getVideos() async throws -> [ExternalVideo] {
         do {
-            if let localFile = Bundle.main.url(forResource: "videos", withExtension: "json") {
-                let videos = try await URLSession.shared.decode(ExternalVideos.self, from: localFile)
-                return videos
-            } else {
-                throw DecodingError.fileNotFound
-            }
+            /// I've already tried using vanilla decoder instead of the extension and I get the same error: icon not found
+            let localFile = Bundle.main.url(forResource: "videos", withExtension: "json")!
+            let decodedObject = try await URLSession.shared.decode(ExternalVideos.self, from: localFile)
+            let videos = decodedObject.videos
+            
+            return videos
+            
+        } catch DecodingError.dataCorrupted(let context) {
+            print(context)
+        } catch DecodingError.keyNotFound(let key, let context) {
+            print("Key '\(key)' not found:", context.debugDescription)
+            print("codingPath:", context.codingPath)
+        } catch DecodingError.valueNotFound(let value, let context) {
+            print("Value '\(value)' not found:", context.debugDescription)
+            print("codingPath:", context.codingPath)
+        } catch DecodingError.typeMismatch(let type, let context) {
+            print("Type '\(type)' mismatch:", context.debugDescription)
+            print("codingPath:", context.codingPath)
         } catch {
-            print("Error: \(error.localizedDescription.debugDescription)")
+            print("error: ", error)
             throw error
         }
+        
+        throw DecodeError.unknown
     }
-    
 }
