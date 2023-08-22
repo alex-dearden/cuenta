@@ -9,7 +9,7 @@ import Foundation
 
 protocol Fetchable {
     /// We don't care how this is imiplemented, just give us an array of Video back
-    func getVideos() async -> [ExternalVideo]
+    func getVideos() async throws -> ExternalVideos
 }
 
 protocol GenericFetchable {
@@ -17,16 +17,23 @@ protocol GenericFetchable {
     func getItems() -> [V]
 }
 
-struct VideoDataManager: Fetchable {
-    func getVideos() async -> [ExternalVideo] {
+struct VideoDataManager {
+    enum DecodingError: Error {
+        case fileNotFound
+    }
+    
+    func getVideos() async throws -> ExternalVideos {
         do {
-            let videos = try await URLSession.shared.decode([ExternalVideo].self, from: Bundle.main.url(forResource: "videos", withExtension: "json")!)
-            return videos
+            if let localFile = Bundle.main.url(forResource: "videos", withExtension: "json") {
+                let videos = try await URLSession.shared.decode(ExternalVideos.self, from: localFile)
+                return videos
+            } else {
+                throw DecodingError.fileNotFound
+            }
         } catch {
-            print("Error: \(error)")
+            print("Error: \(error.localizedDescription.debugDescription)")
+            throw error
         }
-        
-        return []
     }
     
 }

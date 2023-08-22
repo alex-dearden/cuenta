@@ -3,6 +3,10 @@
 
 import Foundation
 
+struct ExternalVideos: Decodable {
+    let videos: [ExternalVideo]
+}
+
 struct ExternalVideo: Decodable {
     let id: String
     let name: String
