@@ -25,6 +25,10 @@ final class Cuenta_Tests: XCTestCase {
         
         XCTAssertFalse(videos.isEmpty)
         XCTAssertTrue(videos.count > 0)
+        XCTAssertEqual(videos.first?.id, "123")
+        XCTAssertEqual(videos.first?.name, "First video")
+        XCTAssertEqual(videos.first?.author, "Mariana Branger")
+        XCTAssertEqual(videos.first?.icon, "video")
     }
 
 }

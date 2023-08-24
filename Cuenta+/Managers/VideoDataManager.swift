@@ -27,8 +27,7 @@ struct VideoDataManager {
     }
 
     func getVideos() async throws -> [ExternalVideo] {
-        do {
-            /// I've already tried using vanilla decoder instead of the extension and I get the same error: icon not found
+        do {            
             let localFile = Bundle.main.url(forResource: "videos", withExtension: "json")!
             let decodedObject = try await URLSession.shared.decode(ExternalVideos.self, from: localFile)
             let videos = decodedObject.videos
