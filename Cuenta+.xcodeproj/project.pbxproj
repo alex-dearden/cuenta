@@ -17,7 +17,6 @@
 		CA7208542A6AAFE20036C4DB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7208532A6AAFE20036C4DB /* SettingsView.swift */; };
 		CA7208562A6AB9850036C4DB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB476522A65820C0076FCB0 /* MainView.swift */; };
 		CA7208582A6AD3AB0036C4DB /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7208572A6AD3AB0036C4DB /* AddView.swift */; };
-		CA7902262A977474002F4E60 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = CA7902252A977474002F4E60 /* SnapshotTesting */; };
 		CA9D96302A72D99C00EB23C5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9D962F2A72D99C00EB23C5 /* DetailView.swift */; };
 		CA9D96332A73CFE600EB23C5 /* ArrayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9D96322A73CFE600EB23C5 /* ArrayManager.swift */; };
 		CA9D96352A74362D00EB23C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9D96342A74362D00EB23C5 /* ContentView.swift */; };
@@ -84,7 +83,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA7902262A977474002F4E60 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +232,6 @@
 			);
 			name = "Cuenta+";
 			packageProductDependencies = (
-				CA7902252A977474002F4E60 /* SnapshotTesting */,
 			);
 			productName = "Cuenta+";
 			productReference = CAB4764D2A65820C0076FCB0 /* Cuenta+.app */;
@@ -251,6 +248,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				CA7902282A98BF9C002F4E60 /* PBXTargetDependency */,
 				CAB476602A65820D0076FCB0 /* PBXTargetDependency */,
 			);
 			name = "Cuenta+Tests";
@@ -394,6 +392,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CA7902282A98BF9C002F4E60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = CA7902272A98BF9C002F4E60 /* SnapshotTesting */;
+		};
 		CAB476602A65820D0076FCB0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CAB4764C2A65820C0076FCB0 /* Cuenta+ */;
@@ -735,7 +737,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CA7902252A977474002F4E60 /* SnapshotTesting */ = {
+		CA7902272A98BF9C002F4E60 /* SnapshotTesting */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CA7902242A977474002F4E60 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
 			productName = SnapshotTesting;

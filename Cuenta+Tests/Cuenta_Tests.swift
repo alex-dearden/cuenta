@@ -5,6 +5,8 @@
 //  Created by Alex Dearden on 17/07/2023.
 //
 
+import SnapshotTesting
+import SwiftUI
 import XCTest
 @testable import Cuenta_
 
@@ -29,6 +31,12 @@ final class Cuenta_Tests: XCTestCase {
         XCTAssertEqual(videos.first?.name, "First video")
         XCTAssertEqual(videos.first?.author, "Mariana Branger")
         XCTAssertEqual(videos.first?.icon, "video")
+    }
+    
+    func testSnapshotMainView() {
+        let mainView = MainView()
+
+        assertSnapshot(matching: mainView, as: .image)
     }
 
 }
