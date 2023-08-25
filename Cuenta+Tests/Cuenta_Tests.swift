@@ -35,6 +35,7 @@ final class Cuenta_Tests: XCTestCase {
     
     func testSnapshotMainView() {
         let mainView = MainView()
+            .environmentObject(VideoStorage(items: VideoStorage.mockVideos))
 
         assertSnapshot(matching: mainView, as: .image)
     }
