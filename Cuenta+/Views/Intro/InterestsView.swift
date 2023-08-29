@@ -9,7 +9,19 @@ import SwiftUI
 
 struct InterestsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            HeaderView()
+            
+            StepView(number: 2, message: "Choose your interests")
+            
+            Form {
+                Section("Interests") {
+                    GridView(items: Category.allCases.map { $0.prettyPrint })
+                }
+            }
+            
+            FooterView()
+        }
     }
 }
 

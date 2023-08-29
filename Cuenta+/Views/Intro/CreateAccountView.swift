@@ -13,13 +13,21 @@ struct CreateAccountView: View {
     @State private var password: String = ""
     
     var body: some View {
-        Form {
-            Section("Account") {
-                TextField("Name", text: $name)
-                TextField("Emails", text: $emails)
-                SecureField("Password", text: $password)
+        VStack(alignment: .leading) {
+            HeaderView()
+            
+            StepView(number: 1, message: "Create an account")
+            
+            Form {
+                Section("Account") {
+                    TextField("Name", text: $name)
+                    TextField("Emails", text: $emails)
+                    SecureField("Password", text: $password)
                     
+                }
             }
+            
+            FooterView()
         }
     }
 }

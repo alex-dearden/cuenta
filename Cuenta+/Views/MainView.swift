@@ -15,7 +15,7 @@ struct MainView: View {
         NavigationView {
             VStack(spacing: 20) {
                 
-                HeaderView(showNewVideo: $showNewVideo)
+                VideoHeaderView(showNewVideo: $showNewVideo)
                 
                 List {
                     ForEach(videoStorage.items) { video in

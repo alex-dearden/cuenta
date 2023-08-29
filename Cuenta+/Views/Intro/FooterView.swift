@@ -13,9 +13,9 @@ struct FooterView: View {
             // TODO: Save preferences and navigate to next view
         } label: {
             Text("Next")
+                .foregroundColor(CuentaColor.violet.swiftColor)
                 .font(.title)
         }
-        .foregroundColor(.white)
         .frame(maxWidth: .infinity)
         .padding()
         .background(CuentaColor.orange.swiftColor)

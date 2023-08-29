@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HeaderView: View {
+struct VideoHeaderView: View {
     ///: This needs to be a `@Binding` because we have to change its value
     /// yet the data doesn't belong to this view, it belongs to the calling view
     /// we could also make it an `@Environment` variable so that this HeaderView can be called from anywhere
@@ -29,8 +29,8 @@ struct HeaderView: View {
     }
 }
 
-struct HeaderView_Previews: PreviewProvider {
+struct VideoHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderView(showNewVideo: .constant(true))
+        VideoHeaderView(showNewVideo: .constant(true))
     }
 }
