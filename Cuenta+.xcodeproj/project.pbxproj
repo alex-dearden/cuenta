@@ -13,8 +13,8 @@
 		CA1C68DD2A94DE6E006BDABA /* videos.json in Resources */ = {isa = PBXBuildFile; fileRef = CA1C68DB2A94DE6E006BDABA /* videos.json */; };
 		CA1C68DF2A94E002006BDABA /* ExternalVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C68DE2A94E002006BDABA /* ExternalVideo.swift */; };
 		CA2CC5282A68249400762943 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CC5272A68249400762943 /* Video.swift */; };
-		CA66B1052A9E0BF4008FC3C7 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66B1042A9E0BF4008FC3C7 /* CreateAccount.swift */; };
-		CA66B1072A9E0C14008FC3C7 /* Interests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66B1062A9E0C14008FC3C7 /* Interests.swift */; };
+		CA66B1052A9E0BF4008FC3C7 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66B1042A9E0BF4008FC3C7 /* CreateAccountView.swift */; };
+		CA66B1072A9E0C14008FC3C7 /* InterestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66B1062A9E0C14008FC3C7 /* InterestsView.swift */; };
 		CA66B10A2A9E0C8C008FC3C7 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66B1092A9E0C8C008FC3C7 /* FooterView.swift */; };
 		CA66B10E2A9E1065008FC3C7 /* CuentaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66B10D2A9E1065008FC3C7 /* CuentaColor.swift */; };
 		CA7208522A6AAFC20036C4DB /* OldContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7208512A6AAFC20036C4DB /* OldContentView.swift */; };
@@ -61,8 +61,8 @@
 		CA1C68DB2A94DE6E006BDABA /* videos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = videos.json; sourceTree = "<group>"; };
 		CA1C68DE2A94E002006BDABA /* ExternalVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalVideo.swift; sourceTree = "<group>"; };
 		CA2CC5272A68249400762943 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
-		CA66B1042A9E0BF4008FC3C7 /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
-		CA66B1062A9E0C14008FC3C7 /* Interests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interests.swift; sourceTree = "<group>"; };
+		CA66B1042A9E0BF4008FC3C7 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		CA66B1062A9E0C14008FC3C7 /* InterestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsView.swift; sourceTree = "<group>"; };
 		CA66B1092A9E0C8C008FC3C7 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		CA66B10D2A9E1065008FC3C7 /* CuentaColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuentaColor.swift; sourceTree = "<group>"; };
 		CA7208512A6AAFC20036C4DB /* OldContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldContentView.swift; sourceTree = "<group>"; };
@@ -145,8 +145,8 @@
 		CA66B1082A9E0C4A008FC3C7 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
-				CA66B1042A9E0BF4008FC3C7 /* CreateAccount.swift */,
-				CA66B1062A9E0C14008FC3C7 /* Interests.swift */,
+				CA66B1042A9E0BF4008FC3C7 /* CreateAccountView.swift */,
+				CA66B1062A9E0C14008FC3C7 /* InterestsView.swift */,
 				CA66B1092A9E0C8C008FC3C7 /* FooterView.swift */,
 			);
 			path = Intro;
@@ -406,10 +406,10 @@
 				CAB738B02A8CF29000B557A1 /* HeaderView.swift in Sources */,
 				CAB738AB2A8CE70800B557A1 /* ItemRow.swift in Sources */,
 				CAB738B42A8D0E6900B557A1 /* VideoStorage.swift in Sources */,
-				CA66B1052A9E0BF4008FC3C7 /* CreateAccount.swift in Sources */,
+				CA66B1052A9E0BF4008FC3C7 /* CreateAccountView.swift in Sources */,
 				CAB476512A65820C0076FCB0 /* Cuenta_App.swift in Sources */,
 				CA9D96332A73CFE600EB23C5 /* ArrayManager.swift in Sources */,
-				CA66B1072A9E0C14008FC3C7 /* Interests.swift in Sources */,
+				CA66B1072A9E0C14008FC3C7 /* InterestsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
