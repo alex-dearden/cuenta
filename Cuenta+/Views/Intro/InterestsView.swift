@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct InterestsView: View {
+    
     var body: some View {
         VStack(alignment: .leading) {
             HeaderView()
@@ -16,7 +17,7 @@ struct InterestsView: View {
             
             Form {
                 Section("Interests") {
-                    GridView(items: Category.allCases.map { $0.prettyPrint })
+                    GridView(items: Interest.allCases.map { $0.prettyPrint })
                 }
             }
             

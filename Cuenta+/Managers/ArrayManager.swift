@@ -21,7 +21,7 @@ protocol ArrayManageable {
 }
 
 ///: Note that this conforms to the `ArrayManageable` protocol but is very restrictive
-/// it sort of defeats the purpose of having a genericl `Element` if we are **typecasting** it to `String`
+/// it sort of defeats the purpose of having a genericl`Element` if we are **typecasting** it to `String`
 class VideoManager: ArrayManageable, ObservableObject {
     typealias Element = Video
 

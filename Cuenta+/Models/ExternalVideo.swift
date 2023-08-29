@@ -13,3 +13,5 @@ struct ExternalVideo: Decodable {
     let author: String
     let icon: String
 }
+
+extension ExternalVideo: Equatable {}

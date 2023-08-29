@@ -26,6 +26,6 @@ struct GridView: View {
 
 struct GridView_Previews: PreviewProvider {
     static var previews: some View {
-        GridView(items: Category.allCases.map { $0.prettyPrint })
+        GridView(items: Interest.allCases.map { $0.prettyPrint })
     }
 }

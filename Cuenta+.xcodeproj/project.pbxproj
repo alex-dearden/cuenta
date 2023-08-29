@@ -21,7 +21,7 @@
 		CA66B1122A9E2140008FC3C7 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66B1112A9E2140008FC3C7 /* CircleView.swift */; };
 		CA66B1142A9E23B9008FC3C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66B1132A9E23B9008FC3C7 /* User.swift */; };
 		CA66B1162A9E24DA008FC3C7 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66B1152A9E24DA008FC3C7 /* UserManager.swift */; };
-		CA66B1182A9E2622008FC3C7 /* Interests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66B1172A9E2622008FC3C7 /* Interests.swift */; };
+		CA66B1182A9E2622008FC3C7 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66B1172A9E2622008FC3C7 /* Interest.swift */; };
 		CA66B11A2A9E2822008FC3C7 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66B1192A9E2822008FC3C7 /* StepView.swift */; };
 		CA66B11C2A9E298B008FC3C7 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66B11B2A9E298B008FC3C7 /* GridView.swift */; };
 		CA66B11E2A9E2F60008FC3C7 /* GridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66B11D2A9E2F60008FC3C7 /* GridItemView.swift */; };
@@ -77,7 +77,7 @@
 		CA66B1112A9E2140008FC3C7 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		CA66B1132A9E23B9008FC3C7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CA66B1152A9E24DA008FC3C7 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		CA66B1172A9E2622008FC3C7 /* Interests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interests.swift; sourceTree = "<group>"; };
+		CA66B1172A9E2622008FC3C7 /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		CA66B1192A9E2822008FC3C7 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		CA66B11B2A9E298B008FC3C7 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		CA66B11D2A9E2F60008FC3C7 /* GridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemView.swift; sourceTree = "<group>"; };
@@ -155,8 +155,7 @@
 				CA1C68DE2A94E002006BDABA /* ExternalVideo.swift */,
 				CA66B10D2A9E1065008FC3C7 /* CuentaColor.swift */,
 				CA66B1132A9E23B9008FC3C7 /* User.swift */,
-				CA66B1152A9E24DA008FC3C7 /* UserManager.swift */,
-				CA66B1172A9E2622008FC3C7 /* Interests.swift */,
+				CA66B1172A9E2622008FC3C7 /* Interest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -204,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				CA9D96322A73CFE600EB23C5 /* ArrayManager.swift */,
+				CA66B1152A9E24DA008FC3C7 /* UserManager.swift */,
 				CA1C68D82A94DBC3006BDABA /* VideoDataManager.swift */,
 			);
 			path = Managers;
@@ -440,7 +440,7 @@
 				CAB476512A65820C0076FCB0 /* Cuenta_App.swift in Sources */,
 				CA9D96332A73CFE600EB23C5 /* ArrayManager.swift in Sources */,
 				CA66B1072A9E0C14008FC3C7 /* InterestsView.swift in Sources */,
-				CA66B1182A9E2622008FC3C7 /* Interests.swift in Sources */,
+				CA66B1182A9E2622008FC3C7 /* Interest.swift in Sources */,
 				CA66B1142A9E23B9008FC3C7 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -5,7 +5,7 @@
 //  Created by Alex Dearden on 29/08/2023.
 //
 
-enum Category: String, CaseIterable {
+enum Interest: String, CaseIterable {
     case technology, science, design, health, mentalHealth, communication, politics
     
     var prettyPrint: String {
