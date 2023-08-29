@@ -33,11 +33,24 @@ final class Cuenta_Tests: XCTestCase {
         XCTAssertEqual(videos.first?.icon, "video")
     }
     
+    
+    /// # Snapshot tests
+    /// should they go in a different file?
     func testSnapshotMainView() {
         let mainView = MainView()
             .environmentObject(VideoStorage(items: VideoStorage.mockVideos))
 
         assertSnapshot(matching: mainView, as: .image, named: "iPhone13")
+    }
+    
+    func testFooterView() {
+        let footer = FooterView()
+        
+        assertSnapshot(
+            matching: footer.frame(width: 300, height: 100),
+            as: .image,
+            named: "iPhone13"
+        )
     }
 
 }
