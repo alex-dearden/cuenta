@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct SelectableItemView: View {
-    let item: InterestModel // TODO: Can we make this generic?
+    let item: any Item // TODO: Can we make this generic?
     @State var isSelected: Bool = false
-    var handler: (InterestModel) -> Void
+    var handler: (any Item) -> Void
     
     var body: some View {
         Button {

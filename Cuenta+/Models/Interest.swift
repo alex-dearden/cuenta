@@ -7,9 +7,14 @@
 
 import Foundation
 
-struct InterestModel: Hashable, Equatable {
-    let id = UUID()
-    let name: String
+protocol Item: Hashable {
+    var id: UUID { get set }
+    var name: String { get set }
+}
+
+struct InterestModel: Hashable, Equatable, Item {
+    var id = UUID()
+    var name: String
 }
 
 /// # This is just a helper, delete when we get them from the web API
