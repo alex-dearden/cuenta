@@ -5,6 +5,8 @@
 //  Created by Alex Dearden on 29/08/2023.
 //
 
+import Foundation
+
 enum Interest: String, CaseIterable {
     case technology, science, design, health, mentalHealth, communication, politics
     
@@ -20,4 +22,13 @@ enum Interest: String, CaseIterable {
 //    #if DEBUG
 //    static let mock
 //    #endif
+}
+
+struct InterestModel: Hashable {
+    let id = UUID()
+    let interest: Interest
+}
+
+struct Defaults {
+    static let allInterests = Interest.allCases.map { InterestModel(interest: $0) }    
 }
