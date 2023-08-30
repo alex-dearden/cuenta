@@ -13,8 +13,9 @@ struct Cuenta_App: App {
     
     var body: some Scene {
         WindowGroup {
-            MainView()
-                .environmentObject(storage)
+            InterestsView()
+//            MainView()
+//                .environmentObject(storage)
         }
     }
 }

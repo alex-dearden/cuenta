@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct InterestsView: View {
+    @State private var selectedItems: [Interest] = []
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -22,7 +23,7 @@ struct InterestsView: View {
                     /// they should be able to remove the selection
                     /// we need to keep a local array or selected `Interests`
                     /// then call `.append` on the appropriate manager to add them
-                    GridView(items: Interest.allCases.map { $0.prettyPrint })
+                    GridView(items: Interest.allCases.map { $0.prettyPrint }, selectedItems: $selectedItems)
                 }
             }
             

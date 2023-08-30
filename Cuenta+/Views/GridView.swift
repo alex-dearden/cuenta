@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GridView: View {
     let items: [String]
+    @Binding var selectedItems: [Interest]
     
     private let columns = [
         GridItem(.adaptive(minimum: 120))
@@ -17,7 +18,7 @@ struct GridView: View {
     var body: some View {
         LazyVGrid(columns: columns, alignment: .leading, spacing: 16) {
             ForEach(items, id: \.self) { item in
-                GridItemView(item)
+                SelectableItemView(buttonText: item)
             }
         }
         .padding()
@@ -26,6 +27,6 @@ struct GridView: View {
 
 struct GridView_Previews: PreviewProvider {
     static var previews: some View {
-        GridView(items: Interest.allCases.map { $0.prettyPrint })
+        GridView(items: Interest.allCases.map { $0.prettyPrint }, selectedItems: .constant([]))
     }
 }
