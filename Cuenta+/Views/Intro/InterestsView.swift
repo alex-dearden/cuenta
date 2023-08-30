@@ -17,6 +17,11 @@ struct InterestsView: View {
             
             Form {
                 Section("Interests") {
+                    // TODO: These need to be buttons or have an `onTap` modifier attached
+                    /// when tapping them, they should change to indicate they've been selected
+                    /// they should be able to remove the selection
+                    /// we need to keep a local array or selected `Interests`
+                    /// then call `.append` on the appropriate manager to add them
                     GridView(items: Interest.allCases.map { $0.prettyPrint })
                 }
             }
