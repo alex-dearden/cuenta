@@ -8,20 +8,22 @@
 import SwiftUI
 
 struct SelectableItemView: View {
-    let buttonText: String
+    let item: InterestModel
     @State var isSelected: Bool = false
+    var handler: (InterestModel) -> Void
     
     var body: some View {
         Button {
             isSelected.toggle()
+            handler(item)
         } label: {
             if isSelected {
                 HStack {
                     Image(systemName: "checkmark.circle.fill")
-                    Text(buttonText)
+                    Text(item.interest.prettyPrint)
                 }
             } else {
-                Text(buttonText)
+                Text(item.interest.prettyPrint)
             }
         }
         .buttonStyle(SelectableButtonStyle())
@@ -41,6 +43,6 @@ struct SelectableButtonStyle: ButtonStyle {
 
 struct SelectableItemView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectableItemView(buttonText: "Mental Health")
+        SelectableItemView(item: Defaults.allInterests.first!, handler: { _ in })
     }
 }

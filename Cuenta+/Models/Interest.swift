@@ -24,7 +24,7 @@ enum Interest: String, CaseIterable {
 //    #endif
 }
 
-struct InterestModel: Hashable {
+struct InterestModel: Hashable, Equatable {
     let id = UUID()
     let interest: Interest
 }
