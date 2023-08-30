@@ -22,7 +22,8 @@ struct GridView: View {
                     item: item,
                     handler: { item in
                         // TODO: this should be done by the item or user manager!
-                        if let interestItem = item as? InterestModel {
+                        guard let interestItem = item as? InterestModel else { return }
+                        
                             if selectedItems.contains(interestItem) {
                                 selectedItems.removeAll(where: { $0 == interestItem })
                                 debugPrint("item REMOVED from selectedItems: \(selectedItems.map { $0.name })")
@@ -30,7 +31,6 @@ struct GridView: View {
                                 selectedItems.append(interestItem)
                                 debugPrint("item ADDED to selectedItems: \(selectedItems.map { $0.name }))")
                             }
-                        }
                     }
                 )
             }
