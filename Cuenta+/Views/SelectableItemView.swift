@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SelectableItemView: View {
-    let item: InterestModel
+    let item: InterestModel // TODO: Can we make this generic?
     @State var isSelected: Bool = false
     var handler: (InterestModel) -> Void
     
@@ -20,10 +20,10 @@ struct SelectableItemView: View {
             if isSelected {
                 HStack {
                     Image(systemName: "checkmark.circle.fill")
-                    Text(item.interest.prettyPrint)
+                    Text(item.name)
                 }
             } else {
-                Text(item.interest.prettyPrint)
+                Text(item.name)
             }
         }
         .buttonStyle(SelectableButtonStyle())

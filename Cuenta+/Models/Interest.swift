@@ -7,6 +7,12 @@
 
 import Foundation
 
+struct InterestModel: Hashable, Equatable {
+    let id = UUID()
+    let name: String
+}
+
+/// # This is just a helper, delete when we get them from the web API
 enum Interest: String, CaseIterable {
     case technology, science, design, health, mentalHealth, communication, politics
     
@@ -18,17 +24,8 @@ enum Interest: String, CaseIterable {
             return self.rawValue.capitalized
         }
     }
-    
-//    #if DEBUG
-//    static let mock
-//    #endif
-}
-
-struct InterestModel: Hashable, Equatable {
-    let id = UUID()
-    let interest: Interest
 }
 
 struct Defaults {
-    static let allInterests = Interest.allCases.map { InterestModel(interest: $0) }    
+    static let allInterests = Interest.allCases.map { InterestModel(name: $0.prettyPrint) }
 }
