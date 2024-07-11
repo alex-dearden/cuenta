@@ -17,16 +17,28 @@ struct SelectableItemView: View {
             isSelected.toggle()
             handler(item)
         } label: {
-            if isSelected {
-                HStack {
-                    Image(systemName: "checkmark.circle.fill")
-                    Text(item.name)
-                }
-            } else {
-                Text(item.name)
-            }
+            LabelItemView(itemName: item.name, isSelected: $isSelected)
         }
         .buttonStyle(SelectableButtonStyle())
+    }
+}
+
+struct LabelItemView: View {
+    let itemName: String
+    @Binding var isSelected: Bool
+    
+    var body: some View {
+        if isSelected {
+            HStack {
+                Image(systemName: "checkmark.circle.fill")
+                Text(itemName).minimumScaleFactor(0.8)
+            }
+        } else {
+            HStack {
+                Image(systemName: "circle")
+                Text(itemName).minimumScaleFactor(0.8)
+            }
+        }
     }
 }
 

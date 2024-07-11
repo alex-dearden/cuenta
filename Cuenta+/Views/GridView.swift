@@ -12,6 +12,7 @@ struct GridView: View {
     @Binding var selectedItems: [InterestModel]
     
     // TODO: We should inject this
+    /// For now, this is only testing
     var userManager = UserManager(
         user: .init(name: "Mariana", email: "mana@email.com", password: "mana"),
         isLoggedIn: true
@@ -24,12 +25,11 @@ struct GridView: View {
     var body: some View {
         LazyVGrid(columns: columns, alignment: .leading, spacing: 16) {
             /// # I can't use `any Item` for `items` above because a protocol cannot conform to `Hashable`
-            /// I might be able to use `type erasure` but not sure how that would work
+            /// I might be able to use `type erasure` but not sure it's worth it
             ForEach(items, id: \.self) { item in
                 SelectableItemView(
                     item: item,
-                    handler: { item in
-                        // TODO: this should be done by the item or user manager!
+                    handler: { item in                        
                         guard let interestItem = item as? InterestModel else { return }
                         userManager.addInterest(interestItem)
                         
