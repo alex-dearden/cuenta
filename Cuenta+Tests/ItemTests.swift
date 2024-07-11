@@ -28,5 +28,22 @@ final class ItemTests: XCTestCase {
         
         XCTAssertEqual(sortedInterests.first?.name, "Communication")
     }
+    
+    func testAddInterest() {
+        let sortedInterests = Defaults.allInterestsSorted
+        let interestToAdd = sortedInterests.first!
+        userManager.addInterest(interestToAdd)
+        XCTAssertEqual(userManager.interests.count, 1)
+        XCTAssertEqual(userManager.interests.first?.name, "Communication")
+    }
 
+    func testRemoveInterest() {
+        let sortedInterests = Defaults.allInterestsSorted
+        userManager.addInterest(sortedInterests[0])
+        userManager.addInterest(sortedInterests[3])
+        XCTAssertEqual(userManager.interests.count, 2)
+        userManager.removeInterest(sortedInterests[0])
+        XCTAssertEqual(userManager.interests.count, 1)
+        XCTAssertEqual(userManager.interests.first?.name, "Mental Health")
+    }
 }

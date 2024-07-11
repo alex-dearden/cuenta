@@ -30,10 +30,12 @@ class UserManager: UserManageable {
     // TODO: perhaps a generic method for append and remove so we don't have to duplicate code below?
     func addInterest(_ item: InterestModel) {
         interests.append(item)
+        debugPrint("\(item.name) ADDED from selectedItems, array is now: \(interests.map { $0.name })")
     }
     
     func removeInterest(_ item: InterestModel) {
         interests.removeAll(where: { $0 == item })
+        debugPrint("\(item.name) REMOVED from selectedItems, array is now: \(interests.map { $0.name })")
     }
     
     func addVideo(_ item: ExternalVideo) {

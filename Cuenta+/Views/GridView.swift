@@ -31,11 +31,9 @@ struct GridView: View {
                         userManager.addInterest(interestItem)
                         
                             if selectedItems.contains(interestItem) {
-                                selectedItems.removeAll(where: { $0 == interestItem })
-                                debugPrint("\(interestItem.name) REMOVED from selectedItems, array is now: \(selectedItems.map { $0.name })")
+                                selectedItems.removeAll(where: { $0 == interestItem })                                
                             } else {
                                 selectedItems.append(interestItem)
-                                debugPrint("item ADDED to selectedItems, array is now: \(selectedItems.map { $0.name }))")
                             }
                     }
                 )
