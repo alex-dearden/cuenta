@@ -11,18 +11,27 @@ struct GridView: View {
     let items: [InterestModel]
     @Binding var selectedItems: [InterestModel]
     
+    // TODO: We should inject this
+    var userManager = UserManager(
+        user: .init(name: "Mariana", email: "mana@email.com", password: "mana"),
+        isLoggedIn: true
+    )
+    
     private let columns = [
         GridItem(.adaptive(minimum: 120))
     ]
     
     var body: some View {
         LazyVGrid(columns: columns, alignment: .leading, spacing: 16) {
+            /// # I can't use `any Item` for `items` above because a protocol cannot conform to `Hashable`
+            /// I might be able to use `type erasure` but not sure how that would work
             ForEach(items, id: \.self) { item in
                 SelectableItemView(
                     item: item,
                     handler: { item in
                         // TODO: this should be done by the item or user manager!
                         guard let interestItem = item as? InterestModel else { return }
+                        userManager.addInterest(interestItem)
                         
                             if selectedItems.contains(interestItem) {
                                 selectedItems.removeAll(where: { $0 == interestItem })

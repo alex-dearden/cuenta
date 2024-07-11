@@ -9,6 +9,7 @@ import Foundation
 
 protocol Fetchable {
     /// We don't care how this is imiplemented, just give us an array of Video back
+    /// though we are specifying that it should be async which maybe infers a bit too much...
     func getVideos() async throws -> ExternalVideos
 }
 

@@ -18,7 +18,7 @@ struct InterestModel: Hashable, Equatable, Item {
 }
 
 /// # This is just a helper, delete when we get them from the web API
-enum Interest: String, CaseIterable {
+private enum Interest: String, CaseIterable {
     case technology, science, design, health, mentalHealth, communication, politics
     
     var prettyPrint: String {
