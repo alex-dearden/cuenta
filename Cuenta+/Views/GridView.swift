@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GridView: View {
     let items: [InterestModel]
-    @Binding var selectedItems: [InterestModel]
+    @State var selectedItems: [InterestModel] = []
     
     // TODO: We should inject this
     /// For now, this is only testing
@@ -35,10 +35,10 @@ struct GridView: View {
                         
                             if selectedItems.contains(interestItem) {
                                 selectedItems.removeAll(where: { $0 == interestItem })
-                                debugPrint("item REMOVED from selectedItems: \(selectedItems.map { $0.name })")
+                                debugPrint("\(interestItem.name) REMOVED from selectedItems, array is now: \(selectedItems.map { $0.name })")
                             } else {
                                 selectedItems.append(interestItem)
-                                debugPrint("item ADDED to selectedItems: \(selectedItems.map { $0.name }))")
+                                debugPrint("item ADDED to selectedItems, array is now: \(selectedItems.map { $0.name }))")
                             }
                     }
                 )
@@ -50,6 +50,6 @@ struct GridView: View {
 
 struct GridView_Previews: PreviewProvider {
     static var previews: some View {
-        GridView(items: Defaults.allInterestsSorted, selectedItems: .constant([]))
+        GridView(items: Defaults.allInterestsSorted, selectedItems: [])
     }
 }

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct InterestsView: View {
-    @State private var selectedItems: [InterestModel] = []
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -18,7 +17,7 @@ struct InterestsView: View {
             
             Form {
                 Section("Interests") {                    
-                    GridView(items: Defaults.allInterestsSorted, selectedItems: $selectedItems)
+                    GridView(items: Defaults.allInterestsSorted)
                 }
             }
             
