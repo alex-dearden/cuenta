@@ -13,10 +13,7 @@ struct GridView: View {
     
     // TODO: We should inject this
     /// For now, this is only testing
-    var userManager = UserManager(
-        user: .init(name: "Mariana", email: "mana@email.com", password: "mana"),
-        isLoggedIn: true
-    )
+    var userManager = UserManager.testUserManager
     
     private let columns = [
         GridItem(.adaptive(minimum: 400))

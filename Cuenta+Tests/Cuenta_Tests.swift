@@ -51,12 +51,5 @@ final class Cuenta_Tests: XCTestCase {
             as: .image,
             named: "iPhone13"
         )
-    }
-    
-    func testSortedInterests() {
-        let sortedInterests = Defaults.allInterestsSorted
-        
-        XCTAssertEqual(sortedInterests.first?.name, "Communication")
-    }
-
+    }    
 }

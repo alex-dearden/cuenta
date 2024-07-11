@@ -31,6 +31,12 @@ private enum Interest: String, CaseIterable {
     }
 }
 
+extension Interest: Comparable {
+    static func < (lhs: Interest, rhs: Interest) -> Bool {
+        return lhs == rhs
+    }
+}
+
 extension InterestModel: Comparable {
     static func < (lhs: InterestModel, rhs: InterestModel) -> Bool {
         return lhs.name == rhs.name
@@ -40,8 +46,8 @@ extension InterestModel: Comparable {
 struct Defaults {
     static let allInterests: [InterestModel] = Interest.allCases.map { InterestModel(name: $0.prettyPrint) }
     static var allInterestsSorted: [InterestModel] {
-        let interests = Interest.allCases.map { InterestModel(name: $0.prettyPrint) }.enumerated().sorted { $0.element.name < $1.element.name }
-        let sorted = interests.map { $0.element }
-        return sorted
+        let sortedString = Interest.allCases.map { $0.prettyPrint }.sorted { $0 < $1 }
+        let interestsSorted: [InterestModel] = sortedString.map { InterestModel(name: $0) }
+        return interestsSorted
     }
 }

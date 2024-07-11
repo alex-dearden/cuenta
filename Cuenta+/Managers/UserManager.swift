@@ -44,3 +44,12 @@ class UserManager: UserManageable {
         videos.removeAll(where: { $0 == item })
     }    
 }
+
+extension UserManager {
+    // MARK: Testing
+    static let testUserManager = UserManager(
+        user: .init(name: "Mariana", email: "mana@email.com", password: "mana"),
+        isLoggedIn: true
+    )
+}
+

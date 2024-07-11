@@ -22,5 +22,11 @@ final class ItemTests: XCTestCase {
     override func tearDownWithError() throws {
         userManager = nil
     }
+    
+    func testSortedInterests() {
+        let sortedInterests = Defaults.allInterestsSorted
+        
+        XCTAssertEqual(sortedInterests.first?.name, "Communication")
+    }
 
 }
