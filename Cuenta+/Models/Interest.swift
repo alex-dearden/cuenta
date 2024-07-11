@@ -40,8 +40,8 @@ extension InterestModel: Comparable {
 struct Defaults {
     static let allInterests = Interest.allCases.map { InterestModel(name: $0.prettyPrint) }
     static var allInterestsSorted: [InterestModel] {
-        let interests = Interest.allCases.map { InterestModel(name: $0.prettyPrint) }
-        let sorted = interests.enumerated().sorted { $0.element.name < $1.element.name }
-        return sorted.map { $0.element }
+        let interests = Interest.allCases.map { InterestModel(name: $0.prettyPrint) }.enumerated().sorted { $0.element.name < $1.element.name }
+        let sorted = interests.map { $0.element }
+        return sorted
     }
 }

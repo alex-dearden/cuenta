@@ -50,6 +50,6 @@ struct GridView: View {
 
 struct GridView_Previews: PreviewProvider {
     static var previews: some View {
-        GridView(items: Defaults.allInterests, selectedItems: .constant([]))
+        GridView(items: Defaults.allInterestsSorted, selectedItems: .constant([]))
     }
 }
