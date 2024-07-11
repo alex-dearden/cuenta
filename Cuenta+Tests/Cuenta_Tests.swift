@@ -52,5 +52,11 @@ final class Cuenta_Tests: XCTestCase {
             named: "iPhone13"
         )
     }
+    
+    func testSortedInterests() {
+        let sortedInterests = Defaults.allInterestsSorted
+        
+        XCTAssertEqual(sortedInterests.first?.name, "Communication")
+    }
 
 }
