@@ -18,7 +18,7 @@ struct InterestsView: View {
             
             Form {
                 Section("Interests") {                    
-                    GridView(items: Defaults.allInterests.map { $0 }, selectedItems: $selectedItems)
+                    GridView(items: Defaults.allInterestsSorted, selectedItems: $selectedItems)
                 }
             }
             
