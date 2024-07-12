@@ -13,6 +13,8 @@ final class ItemTests: XCTestCase {
     private var sortedInterests: [InterestModel]!
     
     override func setUpWithError() throws {
+        // Warning: do not use UserManager.testUserManager here because it's static!
+        // will not reset between tests
         userManager = UserManager(
             user: .init(name: "Mariana", email: "mana@email.com", password: "mana"),
             isLoggedIn: true
