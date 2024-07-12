@@ -3,6 +3,7 @@
 * It was written to play around with new Swift features like `async await`, etc
 * I was also playing around with a new git replacement called [jujutsu](https://github.com/martinvonz/jj)
 * Because of this you might find strange commit messages and branch creation :)
+* you will also find unfinished files that are very much a Work In progress!
 
 # Why am I showing it
 I am showing it as a sample of my work because it gives a good idea of what my process is and some of the code is actually quite good ;)

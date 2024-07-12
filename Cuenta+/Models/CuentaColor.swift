@@ -16,7 +16,6 @@ enum CuentaColor {
         case .orange:
             return Color(red: 253/255, green: 98/255, blue: 73/255)
         case .violet:            
-//            return Color(hue: 275/360, saturation: 0.35, brightness: 0.5)
             return Color(hue: 238/360, saturation: 0.7, brightness: 1)
         }
     }
